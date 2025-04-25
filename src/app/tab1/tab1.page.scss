@@ -1,0 +1,39 @@
+ion-card {
+  margin: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  ion-img {
+    height: 200px;
+    object-fit: cover;
+  }
+}
+
+.progress-text {
+  margin-top: 8px;
+  text-align: center;
+  color: var(--ion-color-medium);
+  font-size: 0.9em;
+}
+
+ion-progress-bar {
+  margin-top: 10px;
+}
+
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+  padding: 20px;
+
+  h2 {
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+
+  p {
+    color: var(--ion-color-medium);
+  }
+}

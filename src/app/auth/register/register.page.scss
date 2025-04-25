@@ -1,0 +1,28 @@
+ion-content {
+  --background: var(--ion-color-light);
+}
+
+form {
+  max-width: 500px;
+  margin: auto;
+  padding: 20px;
+}
+
+ion-list {
+  background: transparent;
+  padding: 0;
+}
+
+ion-item {
+  --background: var(--ion-color-light);
+  margin-bottom: 16px;
+  --border-width: 0;
+  --inner-border-width: 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  --highlight-height: 0;
+}
+
+ion-button {
+  margin-top: 20px;
+}

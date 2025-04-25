@@ -1,17 +1,61 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Tab 3
-    </ion-title>
+    <ion-title>Profile</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="toggleEdit()" *ngIf="!isEditing">
+        <ion-icon slot="icon-only" name="create-outline"></ion-icon>
+      </ion-button>
+      <ion-button (click)="updateProfile()" *ngIf="isEditing">
+        <ion-icon slot="icon-only" name="checkmark-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
+      <ion-title size="large">Profile</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+  <div class="ion-padding">
+    <div class="profile-image-container ion-text-center">
+      <ion-avatar class="large-avatar">
+        <img [src]="user?.avatarUrl || 'assets/default-avatar.png'" alt="Profile picture">
+      </ion-avatar>
+    </div>
+
+    <ion-list>
+      <ion-item>
+        <ion-label position="stacked">Username</ion-label>
+        <ion-input
+          [readonly]="!isEditing"
+          [(ngModel)]="editableUser.username"
+          type="text">
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Email</ion-label>
+        <ion-input
+          [readonly]="!isEditing"
+          [(ngModel)]="editableUser.email"
+          type="email">
+        </ion-input>
+      </ion-item>
+
+      <ion-item *ngIf="isEditing">
+        <ion-label position="stacked">Avatar URL</ion-label>
+        <ion-input
+          [(ngModel)]="editableUser.avatarUrl"
+          type="url">
+        </ion-input>
+      </ion-item>
+    </ion-list>
+
+    <ion-button expand="block" color="danger" class="ion-margin-top" (click)="signOut()">
+      Sign Out
+    </ion-button>
+  </div>
 </ion-content>

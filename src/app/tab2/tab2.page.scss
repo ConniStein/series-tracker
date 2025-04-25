@@ -1,0 +1,23 @@
+.image-upload-container {
+  width: 100%;
+  padding: 16px 0;
+
+  .image-preview {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto 16px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+
+  .upload-button {
+    margin: 0 auto;
+  }
+}
