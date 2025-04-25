@@ -68,6 +68,7 @@ export class Tab1Page implements OnInit {
             platform: 'Netflix',
             totalEpisodes: 10,
             watchedEpisodes: 0,
+            notes: '',
             user_id: user.id,
             imageUrl: 'https://via.placeholder.com/300x450'
           };

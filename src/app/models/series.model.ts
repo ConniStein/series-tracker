@@ -5,5 +5,6 @@ export interface Series {
   totalEpisodes: number;
   watchedEpisodes: number;
   user_id: string;
+  notes: string;
   imageUrl?: string;
 }

@@ -25,12 +25,13 @@
     <ion-row>
       <ion-col size="12" size-sm="6" size-md="4" size-lg="3" *ngFor="let item of series">
         <ion-card>
-          <ion-img [src]="item.imageUrl || 'assets/placeholder-series.jpg'"></ion-img>
+          <ion-img [src]="item.imageUrl || 'assets/img/placeholder-image.jpeg'"></ion-img>
           <ion-card-header>
             <ion-card-title>{{ item.title }}</ion-card-title>
             <ion-card-subtitle>{{ item.platform }}</ion-card-subtitle>
           </ion-card-header>
           <ion-card-content>
+            <p>{{ item.notes }}</p>
             <ion-progress-bar [value]="item.watchedEpisodes / item.totalEpisodes"></ion-progress-bar>
             <div class="progress-text">
               Episode {{ item.watchedEpisodes }}/{{ item.totalEpisodes }}

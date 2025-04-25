@@ -20,6 +20,7 @@ export class Tab2Page {
     totalEpisodes: 0,
     watchedEpisodes: 0,
     user_id: '',
+    notes: '',
     imageUrl: ''
   };
 
@@ -131,6 +132,7 @@ export class Tab2Page {
       totalEpisodes: 0,
       watchedEpisodes: 0,
       user_id: '',
+      notes:'',
       imageUrl: ''
     };
     this.imagePreview = null;
